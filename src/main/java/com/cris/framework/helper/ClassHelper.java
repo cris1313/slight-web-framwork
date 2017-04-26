@@ -43,7 +43,7 @@ public final class ClassHelper {
     }
 
     //获取包名下的所有bean类，把service和controller当作bean
-    public Set<Class<?>> getBeanSet(){
+    public static Set<Class<?>> getBeanSet(){
         Set<Class<?>> beanSet = new HashSet<Class<?>>();
         beanSet.addAll(getControllerClassSet());
         beanSet.addAll(getServiceClassSet());

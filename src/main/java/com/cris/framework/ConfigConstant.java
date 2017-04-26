@@ -4,7 +4,6 @@ package com.cris.framework;
  */
 public interface ConfigConstant {
     String CONFIG_FILE = "cris.properties";
-
     String JDBC_DRIVER = "cris.framework.jdbc.driver";
     String JDBC_URL = "cris.framework.jdbc.url";
     String JDBC_USERNAME = "cris.framework.jdbc.username";
