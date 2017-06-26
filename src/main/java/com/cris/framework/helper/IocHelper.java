@@ -2,6 +2,7 @@ package com.cris.framework.helper;
 
 import com.cris.framework.annotation.AutoInject;
 import com.cris.framework.util.ReflectionUtil;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -16,14 +17,17 @@ public class IocHelper {
         Map<Class<?>,Object> beanMaps = BeanHelper.getBeanMap();
         for (Map.Entry<Class<?>,Object> beanEntry:beanMaps.entrySet()){
             Field []fields = beanEntry.getKey().getDeclaredFields();
+            if (!ArrayUtils.isEmpty(fields)){
             for(Field field:fields){
                 //判断当前区域是否带有@AutoInject注解
                 if(field.isAnnotationPresent(AutoInject.class)){
+                    Object beanInstance = beanMaps.get(field.getType());
+                    if (beanInstance!=null)
                     //注入
-                    ReflectionUtil.setField(beanEntry.getKey(),field,beanMaps.get(field.getType()));
-                    // TODO: 2017/4/26  
+                    ReflectionUtil.setField(beanEntry.getKey(),field,beanInstance);
                 }
             }
+        }
         }
     }
 }

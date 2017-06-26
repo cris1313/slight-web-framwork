@@ -12,6 +12,9 @@ public final class ConfigHelper {
     private static final Properties PROS = PropsUtil.loadProps(ConfigConstant.CONFIG_FILE);
     //返回应用的基础包名
     public static String getAppBasePackage(){
+
         return PropsUtil.getString(PROS,ConfigConstant.APP_BASE_PACKAGE);
     }
+
+
 }
