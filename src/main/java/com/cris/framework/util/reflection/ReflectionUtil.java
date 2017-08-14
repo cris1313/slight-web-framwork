@@ -1,10 +1,11 @@
-package com.cris.framework.util;
+package com.cris.framework.util.reflection;
 
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * Created by owen on 2017/4/26.
@@ -29,5 +30,19 @@ public class ReflectionUtil {
             LOGGER.error("set field error",e);
             throw new RuntimeException();
         }
+    }
+    /**
+     * 调用方法
+     */
+    public static Object invokeMethod(Object obj, Method method, Object... args) {
+        Object result;
+        try {
+            method.setAccessible(true);
+            result = method.invoke(obj, args);
+        } catch (Exception e) {
+            LOGGER.error("invoke method failure", e);
+            throw new RuntimeException(e);
+        }
+        return result;
     }
 }

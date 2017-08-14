@@ -1,4 +1,4 @@
-package com.cris.framework.bean;
+package com.cris.framework.base.bean;
 
 import java.lang.reflect.Method;
 

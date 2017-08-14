@@ -1,4 +1,4 @@
-package com.cris.framework;
+package com.cris.framework.base.config;
 /**
  * Created by owen on 2017/4/25.
  */

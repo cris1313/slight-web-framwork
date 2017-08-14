@@ -1,6 +1,6 @@
 package com.cris.framework.helper;
 
-import com.cris.framework.util.ReflectionUtil;
+import com.cris.framework.util.reflection.ReflectionUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,6 +25,10 @@ public class BeanHelper {
         return BEAN_MAP;
     }
 
+    //根据类获取实例
+    public static Object getBean(Class<?> beanClass){
+        return BEAN_MAP.get(beanClass);
+    }
 
 
 

@@ -1,5 +1,7 @@
-package com.cris.framework.util;
+package com.cris.framework.util.io;
 
+import com.cris.framework.util.commons.CastUtil;
+import com.cris.framework.util.reflection.ClassUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

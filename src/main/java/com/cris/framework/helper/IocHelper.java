@@ -1,7 +1,7 @@
 package com.cris.framework.helper;
 
 import com.cris.framework.annotation.AutoInject;
-import com.cris.framework.util.ReflectionUtil;
+import com.cris.framework.util.reflection.ReflectionUtil;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.Field;

@@ -1,8 +1,8 @@
 package com.cris.framework.helper;
 
 import com.cris.framework.annotation.Action;
-import com.cris.framework.bean.Handler;
-import com.cris.framework.bean.Request;
+import com.cris.framework.base.bean.Handler;
+import com.cris.framework.base.bean.Request;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.cris.framework.util;
+package com.cris.framework.util.commons;
 
 import org.apache.commons.lang3.StringUtils;
 

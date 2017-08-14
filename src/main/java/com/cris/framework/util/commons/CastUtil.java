@@ -1,4 +1,4 @@
-package com.cris.framework.util;
+package com.cris.framework.util.commons;
 
 /**
  * 转型操作工具类
